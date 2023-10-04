@@ -1,32 +1,32 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Alerts from './components/Alerts/Alerts'
 import Buscador from './components/Buscador/Buscador'
 
 function App() {
-// let prueba = ""
+let prueba = "0"
 
 const [mensaje, setMensaje] = useState("")
 const [error, setError] = useState(false)
 const [exito, setExito] = useState(false)
 
-// const condicionn = () => {
-if (true){
-  setError(true)
-  setExito(false)
-  setMensaje("error")
-  
-}else{
-  setExito(true)
-  setError(false)
-  setMensaje("tiene algo")  
-}
-// }
-// console.log(prueba)
+useEffect(()=>{
+  if (prueba === "") {
+    setError(true);
+    setExito(false);
+    setMensaje("error");
+    
+  } else {
+    setExito(true);
+    setError(false);
+    setMensaje("tiene algo");
+  }
+},[prueba])
   return (
     <div>
-      <h1>Hola Mundo Real</h1>
-      {/* <Buscador/> */}
+      <h1>Lista de colaboradores</h1>
+      <Buscador />
+      <br />
       {error && <Alerts color={"danger"} mensaje={mensaje}/>}
       {exito && <Alerts color={"success"} mensaje={mensaje}/>}
 
