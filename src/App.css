@@ -1,3 +1,13 @@
-.h1 {
-  color: #d80a0a;
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(20deg, #dbdbdb 50% ,  rgb(214, 195, 231)99%);
+  max-width: 100%;
+  min-height: 100vh;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(80, 79, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
