@@ -11,18 +11,20 @@ const App = () => {
 	const [error, setError] = useState(false);
 	const [exito, setExito] = useState(false);
 	return (
-		<div className="container-fluid d-flex justify-content-center flex-wrap gap-5">
-			<div>
-      <h1 className="mb-4">Listado de Colaboradores</h1>
-				<Buscador/>
-				<Listado colaboradores={colaboradores} />
-			</div>
-			<div className="w-25">
-				<Formulario colaboradores={colaboradores} setColaboradores={setColaboradores} setError={setError} setExito={setExito} setMensaje={setMensaje} />
-				{error && <Alerts color={"danger"} mensaje={mensaje} />}
-				{exito && <Alerts color={"success"} mensaje={mensaje} />}
-			</div>
-		</div>
+		<div className="container ml-5">
+        <div class="row">
+            <div class="col-lg-9">
+              <h1 className="mb-4">Listado de Colaboradores</h1>
+                  <Buscador/>
+                  <Listado colaboradores={colaboradores} />
+            </div>
+            <div class="col-lg-3">
+                  <Formulario colaboradores={colaboradores} setColaboradores={setColaboradores} setError={setError} setExito={setExito} setMensaje={setMensaje} />
+                  {error && <Alerts color={"danger"} mensaje={mensaje} />}
+                  {exito && <Alerts color={"success"} mensaje={mensaje} />}
+			      </div>
+          </div>
+      </div>
 	);
 };
 export default App;

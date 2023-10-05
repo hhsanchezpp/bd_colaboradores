@@ -1,23 +1,35 @@
 const BoxCard = ({colaboradore}) => {
     return (
-      <div className="mt-5">
+      <div className="mt-6">
         
         <div className="card">
+            <div class="row">
+        <div class="col-lg-2">
           <p className="fw-bold">
-            Nombre: <span className="fw-normal">{colaboradore.name}</span>
+            <span className="fw-normal">{colaboradore.name}</span>
           </p>
+          </div>
+          <div class="col-lg-2">
           <p className="fw-bold">
-            Email: <span className="fw-normal">{colaboradore.email}</span>
+            <span className="fw-normal">{colaboradore.email}</span>
           </p>
+          </div>
+          <div class="col-lg-2">
           <p className="fw-bold">
-            Edad: <span className="fw-normal">{colaboradore.edad}</span>
+            <span className="fw-normal">{colaboradore.edad}</span>
           </p>
+          </div>
+          <div class="col-lg-2">
           <p className="fw-bold">
-            Cargo: <span className="fw-normal">{colaboradore.cargo}</span>
+            <span className="fw-normal">{colaboradore.cargo}</span>
           </p>
+          </div>
+          <div class="col-lg-4">
           <p className="fw-bold">
-            Telefono: <span className="fw-normal">{colaboradore.telefono}</span>
+            <span className="fw-normal">{colaboradore.telefono}</span>
           </p>
+          </div>
+          </div>
         </div>
       </div>
     );
