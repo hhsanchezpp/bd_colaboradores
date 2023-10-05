@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import Formulario from "./components/Formulario";
-import Listado from "./components/Listado";
+import Listado, { BaseColaboradores } from "./components/Listado";
 import Alerts from "./components/Alerts/Alerts";
 import Buscador from "./components/Buscador/Buscador";
 
+
+
 const App = () => {
-	const [colaboradores, setColaboradores] = useState([]);
+	const [colaboradores, setColaboradores] = useState(BaseColaboradores);
 	const [mensaje, setMensaje] = useState("");
 	const [error, setError] = useState(false);
 	const [exito, setExito] = useState(false);

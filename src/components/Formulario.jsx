@@ -24,8 +24,8 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
       setEdad("");
       setCargo("");
       setTelefono("");
-      const colaboradore = { name, email, edad, cargo, telefono };
-      setColaboradores([...colaboradores, colaboradore]);
+      const colaborador = { name, email, edad, cargo, telefono };
+      setColaboradores([...colaboradores, colaborador]);
     }
   }
   return (
@@ -112,11 +112,11 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
 };
 
 Formulario.propTypes = {
-  colaboradores: PropsTypes.string.isRequired, 
-  setColaboradores: PropsTypes.string.isRequired, 
-  setError: PropsTypes.string.isRequired, 
-  setExito: PropsTypes.string.isRequired, 
-  setMensaje: PropsTypes.string.isRequired
+  colaboradores: PropsTypes.array.isRequired, 
+  setColaboradores: PropsTypes.func.isRequired, 
+  setError: PropsTypes.func.isRequired, 
+  setExito: PropsTypes.func.isRequired, 
+  setMensaje: PropsTypes.func.isRequired
 }
 
 export default Formulario;

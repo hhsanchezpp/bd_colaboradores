@@ -1,33 +1,33 @@
 import  propsTypes from "prop-types"
 
-const BoxCard = ({ colaboradore }) => {
+const BoxCard = ({ colaborador }) => {
 	return (
 		<div className="mt-6">
 			<div className="card">
 				<div className="row d-flex align-items-center justify-content-center">
 					<div className="col-lg-2">
 						<p className="fw-bold ">
-							<span className="fw-normal">{colaboradore.name}</span>
+							<span className="fw-normal">{colaborador.name}</span>
 						</p>
 					</div>
 					<div className="col-lg-4">
 						<p className="fw-bold">
-							<span className="fw-normal">{colaboradore.email}</span>
+							<span className="fw-normal">{colaborador.email}</span>
 						</p>
 					</div>
 					<div className="col-lg-1">
 						<p className="fw-bold">
-							<span className="fw-normal">{colaboradore.edad}</span>
+							<span className="fw-normal">{colaborador.edad}</span>
 						</p>
 					</div>
 					<div className="col-lg-2">
 						<p className="fw-bold">
-							<span className="fw-normal">{colaboradore.cargo}</span>
+							<span className="fw-normal">{colaborador.cargo}</span>
 						</p>
 					</div>
 					<div className="col-lg-2">
 						<p className="fw-bold">
-							<span className="fw-normal">{colaboradore.telefono}</span>
+							<span className="fw-normal">{colaborador.telefono}</span>
 						</p>
 					</div>
 				</div>
@@ -37,7 +37,7 @@ const BoxCard = ({ colaboradore }) => {
 };
 
 BoxCard.propTypes = {
-  colaboradore: propsTypes.string.isRequired
+  colaborador: propsTypes.object.isRequired
 }
 
 export default BoxCard;
