@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import Formulario from "./components/Formulario"
+import Listado from "./components/Listado"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () =>  {
+  const [colaboradores, setColaboradores] = useState([])
   return (
-    <>
-      <h1>Hola Mundo Real</h1>
-    </>
+    <div className='container'>
+      <Formulario colaboradores={colaboradores} setColaboradores={setColaboradores} />
+      <Listado colaboradores={colaboradores} />
+    </div>
   )
 }
 
