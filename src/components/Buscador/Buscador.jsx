@@ -21,7 +21,7 @@ const [cap, setCap] = useState("")
     }
 
     return (
-        <div className="d-flex gap-4 ">
+        <div className="d-flex gap-4 mb-4">
             <form className="d-flex gap-4" onSubmit={filtrar} >
                 <input
                     className="form-control"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropsTypes from "prop-types"
 
 const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMensaje }) => {
   const [name, setName] = useState("");
@@ -29,7 +30,7 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
   }
   return (
     <div className="">
-      <h2> Agregar colaborador</h2>
+      <h2 className="mb-5 mt-3"> Agregar colaborador</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-2">
 
@@ -102,12 +103,20 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
           />
         </div>
 
-        <button type="submit" className="btn btn-primary ">
+        <button type="submit" className="btn btn-primary container mt-3">
           Agregar Colaborador
         </button>
       </form>
     </div>
   );
 };
+
+Formulario.propTypes = {
+  colaboradores: PropsTypes.string.isRequired, 
+  setColaboradores: PropsTypes.string.isRequired, 
+  setError: PropsTypes.string.isRequired, 
+  setExito: PropsTypes.string.isRequired, 
+  setMensaje: PropsTypes.string.isRequired
+}
 
 export default Formulario;
