@@ -1,8 +1,8 @@
 import PropsTypes from "prop-types"
 const Alerts = ({mensaje, color}) => {
   return (
-    <div>
-        <p className= {`alert alert-${color}`} >{mensaje}</p>
+    <div className="text-center mt-3 ">
+        <p className= {` alert alert-${color}`} >{mensaje}</p>
     </div>
   )
 }
