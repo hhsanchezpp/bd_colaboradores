@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react'
 import Formulario from "./components/Formulario"
 import Listado from "./components/Listado"
 
@@ -11,6 +10,5 @@ const App = () =>  {
       <Listado colaboradores={colaboradores} />
     </div>
   )
-}
-
+}  
 export default App
