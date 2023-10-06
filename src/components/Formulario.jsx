@@ -13,12 +13,12 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
     if (!name || !email || !edad || !cargo || !telefono) {
       setError(true);
       setExito(false)
-      setMensaje('Todos los datos son obligatorios')
+      setMensaje('Todos los "CAMPOS" son obligatorios... 😓')
       return;
     } else {
       setError(false);
       setExito(true)
-      setMensaje("Colaborador agregado exitosamente")
+      setMensaje("Colaborador agregado exitosamente!!! 💪")
       setName("");
       setEmail("");
       setEdad("");
@@ -103,7 +103,7 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
           />
         </div>
 
-        <button type="submit" className="btn btn-primary container mt-3">
+        <button type="submit" className="btn btn-primary container mt-3 mb-3">
           Agregar Colaborador
         </button>
       </form>
@@ -112,10 +112,10 @@ const Formulario = ({ colaboradores, setColaboradores, setError, setExito, setMe
 };
 
 Formulario.propTypes = {
-  colaboradores: PropsTypes.array.isRequired, 
-  setColaboradores: PropsTypes.func.isRequired, 
-  setError: PropsTypes.func.isRequired, 
-  setExito: PropsTypes.func.isRequired, 
+  colaboradores: PropsTypes.array.isRequired,
+  setColaboradores: PropsTypes.func.isRequired,
+  setError: PropsTypes.func.isRequired,
+  setExito: PropsTypes.func.isRequired,
   setMensaje: PropsTypes.func.isRequired
 }
 

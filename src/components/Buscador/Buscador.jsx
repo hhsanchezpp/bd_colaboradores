@@ -1,45 +1,27 @@
-import { useState } from "react";
-
-const Buscador = () => {
-// 
-const [cap, setCap] = useState("")
-    const capInput =(e) => {
-        setCap(e.target.value)
-    }
-// console.log (cap)
-    const filtrar = (e) => {
-        e.preventDefault ()
-        if (cap === ""){
-            console.log("esta vacio")
-            return
-        }
-        else{
-            console.log("enviado")
-            setCap("")
-    
-        }
-    }
+import propsTypes from "prop-types"
+const Buscador = ({filtrado, setFiltrado}) => {
 
     return (
         <div className="d-flex gap-4 mb-4">
-            <form className="d-flex gap-4" onSubmit={filtrar} >
+            <form className="d-flex gap-4" >
                 <input
                     className="form-control"
-                    placeholder="Buscador"
-                    value={cap}
-                    onChange={capInput}
+                    placeholder="Filtra colaboradores"
+                    value={filtrado}
+                    onChange={(e) => setFiltrado(e.target.value)}
                     >
                 </input>
-                <button
-                    className="btn btn-primary"
-                    type="submit">
-                    Filtrar
-                </button>
+ 
             </form>
         </div>
 
     );
 };
+
+Buscador.propTypes = {
+    filtrado: propsTypes.string.isRequired,
+    setFiltrado: propsTypes.func.isRequired
+}
 
 export default Buscador;
 
