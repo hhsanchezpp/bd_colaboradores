@@ -13,14 +13,15 @@ const App = () => {
 	const [error, setError] = useState(false);
 	const [exito, setExito] = useState(false); 
 	const [filtrado, setFiltrado] = useState("")
+	const [resultado, setResultado] = useState([]);
 
 	return (
 		<div className="container-fluid  px-md-5  mt-5 ">	
 			<div className="row">
 				<div className="col-lg-9 text-center">
 					<h1 className="mb-4 text-start">Listado de Colaboradores</h1>
-					<Buscador filtrado={filtrado} setFiltrado={setFiltrado}/>
-					<Listado colaboradores={colaboradores} filtrado={filtrado} />
+					<Buscador filtrado={filtrado} setFiltrado={setFiltrado} resultado={resultado} setResultado={setResultado}colaboradores={colaboradores}/>
+					<Listado colaboradores={colaboradores} filtrado={filtrado} resultado={resultado}/>
 				</div>
 				<div className="col-lg-3">
 					<Formulario colaboradores={colaboradores} setColaboradores={setColaboradores} setError={setError} setExito={setExito} setMensaje={setMensaje} />
